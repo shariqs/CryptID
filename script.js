@@ -46,7 +46,11 @@ identityAddedEvent.watch(function (err, result) {
     if (!err) {
         console.log(result.args.privateKey);
         //$("#pKey").html("This is your private key. DO NOT LOSE IT!\n" + result.args.privateKey);
+    } else {
+        console.log(err);
     }
+
+    console.log("At least ran the code");
 });
 
 

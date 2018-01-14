@@ -116,7 +116,7 @@ const abi = [
 				"type": "string"
 			}
 		],
-		"name": "createRecieverKey",
+		"name": "createReceiverKey",
 		"outputs": [
 			{
 				"name": "",

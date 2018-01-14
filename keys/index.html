@@ -19,7 +19,7 @@
 
         <div id="menu" style="padding-top:20px;">
             <!-- Home does not exist yet...Mojmir making it -->
-            <a href="../Home">Home</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a href="../home/index.html">Home</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
             <a href="../index.html">Register</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
             <a href="../lookup/index.html">Lookup</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
             <a href="../send/index.html">Send</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -31,17 +31,33 @@
 
     <div id="grid-container">
         <div class="main">
-            <h1 id="singup-text">*Your Public Keys</h1> 
-            <button class="btn btn-primary">Add New Public Key</button>
-            <div class="box shadow" style="margin-top: 15px;">
-                <p>1. alwkejgsdlkajs</p> <hr>
-                <p>2. alwkejgsdlkajs</p> <hr>
-                <p>3. alwkejgsdlkajs</p> <hr>
-                <p>4. alwkejgsdlkajs</p> <hr>
-                <p>5. alwkejgsdlkajs</p> <hr>
-                <p>6. alwkejgsdlkajs</p> <hr>
-                <p>7. alwkejgsdlkajs</p> <hr>
+            <div class="form-container">
+                <label class="shadow">
+                    <span>Your Private Key</span>
+                    <input type="text" id="privateKey" placeholder="Private Key">
+                    <button class="btn btn-primary" style="margin-bottom: 15px; width: 50%;">Get Keys</button>
+                </label>
+            </div>
+            <div id="hide-until-keys">
+                <h1 id="singup-text">*Your Public Keys</h1>
+                <button class="btn btn-primary">Add New Public Key</button>
+                <div class="box shadow" style="margin-top: 15px;">
+                    <p>1. alwkejgsdlkajs</p>
+                    <hr>
+                    <p>2. alwkejgsdlkajs</p>
+                    <hr>
+                    <p>3. alwkejgsdlkajs</p>
+                    <hr>
+                    <p>4. alwkejgsdlkajs</p>
+                    <hr>
+                    <p>5. alwkejgsdlkajs</p>
+                    <hr>
+                    <p>6. alwkejgsdlkajs</p>
+                    <hr>
+                    <p>7. alwkejgsdlkajs</p>
+                    <hr>
 
+                </div>
             </div>
             <!-- Loader -->
             <div class="loader">

@@ -118,6 +118,11 @@ label>span {
 	color: #202D4A;
 }
 
+/* Hides the div until the keys are returned */
+#hide-until-keys{
+	display: none;
+}
+
 
 /* ABSTRACT STYLES */
 
@@ -154,3 +159,4 @@ label>span {
 	font-weight: bold;
 	text-align: center;
 }
+
