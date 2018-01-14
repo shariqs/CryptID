@@ -1,11 +1,66 @@
-const contractAddress = '0x29805f273ddbcac070a3771a8d264815976f8896';
+const contractAddress = '0x2c31e198dd09b949c7870c64d32ff9e45b91a328';
 const abi = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getPublicKeys",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "publicKey",
+				"type": "bytes32"
+			}
+		],
+		"name": "getIdentity",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "fName",
+						"type": "string"
+					},
+					{
+						"name": "lName",
+						"type": "string"
+					},
+					{
+						"name": "addr",
+						"type": "string"
+					},
+					{
+						"name": "dob",
+						"type": "string"
+					},
+					{
+						"name": "ssn",
+						"type": "string"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
 	{
 		"constant": false,
 		"inputs": [
 			{
 				"name": "_address",
-				"type": "address"
+				"type": "string"
 			},
 			{
 				"name": "_fName",
@@ -42,45 +97,15 @@ const abi = [
 				"type": "string"
 			}
 		],
-		"name": "createRecieverKey",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "_address",
-				"type": "address"
-			}
-		],
-		"name": "getIdentity",
+		"name": "createPublicKey",
 		"outputs": [
 			{
 				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "string"
+				"type": "bytes32"
 			}
 		],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -91,8 +116,13 @@ const abi = [
 				"type": "string"
 			}
 		],
-		"name": "createPublicKey",
-		"outputs": [],
+		"name": "createRecieverKey",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -103,7 +133,7 @@ const abi = [
 			{
 				"indexed": false,
 				"name": "privateKey",
-				"type": "address"
+				"type": "string"
 			}
 		],
 		"name": "identityAdded",
@@ -139,30 +169,6 @@ const abi = [
 			}
 		],
 		"name": "identityFound",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"name": "publicKey",
-				"type": "bytes32"
-			}
-		],
-		"name": "publicKeyCreated",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"name": "recieverKey",
-				"type": "bytes32"
-			}
-		],
-		"name": "recieverKeyCreated",
 		"type": "event"
 	}
 ];
