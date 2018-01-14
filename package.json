@@ -1,0 +1,26 @@
+{
+  "name": "cryptid",
+  "version": "1.0.0",
+  "description": "Decentralized Identification System on Blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shariqs/CryptID.git"
+  },
+  "author": "Shariq Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shariqs/CryptID/issues"
+  },
+  "homepage": "https://github.com/shariqs/CryptID#readme",
+  "dependencies": {
+    "web3": "^0.20.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
