@@ -1,8 +1,13 @@
-const contractAddress = '0x2c31e198dd09b949c7870c64d32ff9e45b91a328';
+const contractAddress = '0x3c16019880b78b556e7c54ee6d8aec4c5d2b864d';
 const abi = [
 	{
 		"constant": true,
-		"inputs": [],
+		"inputs": [
+			{
+				"name": "privateKey",
+				"type": "string"
+			}
+		],
 		"name": "getPublicKeys",
 		"outputs": [
 			{
@@ -18,6 +23,10 @@ const abi = [
 		"constant": true,
 		"inputs": [
 			{
+				"name": "privateKey",
+				"type": "string"
+			},
+			{
 				"name": "publicKey",
 				"type": "bytes32"
 			}
@@ -25,30 +34,24 @@ const abi = [
 		"name": "getIdentity",
 		"outputs": [
 			{
-				"components": [
-					{
-						"name": "fName",
-						"type": "string"
-					},
-					{
-						"name": "lName",
-						"type": "string"
-					},
-					{
-						"name": "addr",
-						"type": "string"
-					},
-					{
-						"name": "dob",
-						"type": "string"
-					},
-					{
-						"name": "ssn",
-						"type": "string"
-					}
-				],
 				"name": "",
-				"type": "tuple"
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
 			}
 		],
 		"payable": false,
@@ -109,25 +112,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "privateKey",
-				"type": "string"
-			}
-		],
-		"name": "createReceiverKey",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -170,5 +154,23 @@ const abi = [
 		],
 		"name": "identityFound",
 		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "privateKey",
+				"type": "string"
+			},
+			{
+				"name": "publicKey",
+				"type": "bytes32"
+			}
+		],
+		"name": "sendIdentity",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
 	}
 ];

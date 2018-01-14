@@ -56,7 +56,6 @@ identityAddedEvent.watch(function (err, result) {
 
 
 $("#register-button").click(function() {
-    console.log("hi");
     ID.addIdentity(web3.eth.defaultAccount, $("#fName").val(), $("#lName").val(),  $("#addr").val(),  $("#dob").val(),  $("#ssn").val(),   (err, res) => {
         if(err){
             $(".loader").hide();
