@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="sign-up-modal">
+        <div id="close-modal-button">
+        </div>
+        <div class="logo-container">
+            <h1><i class="fa fa-id-card-o" aria-hidden="true"></i><strong> CryptID</strong></h1>
+        </div>
+        <form class="details">
+            <div class="input-container">
+                <input class="col-sm-12 email-input with-placeholder" name="ssn" id="ssn" type="text" placeholder="SSN" />
+            </div>
+            <div class="input-container">
+                <input class="col-sm-5 username-input with-placeholder" name="fName" id="fName" type="text" placeholder="First Name" maxlength="8" />
+            </div>
+            <div class="input-container">
+                <input class="col-sm-5 col-sm-push-2 password-input with-placeholder" name="lName" id="lName" type="text" placeholder="Last Name" />
+            </div>
+
+            <div class="bt input-container">
+                <input class="col-sm-4 username-input with-placeholder" id="birth" name="birth" type="text" placeholder="mm/dd/yyyy" maxlength="8" />
+            </div>
+            <div class="bt input-container">
+                <input class="col-sm-6 col-sm-push-2 password-input with-placeholder" name="address" id="address" type="text" placeholder="Address" />
+            </div>
+            
+            
+            <input id="sign-up-button" type="submit" value="Send to BlockChain!">
+            <p>Powered By Ambii.io<a href="#signIn"></a></p>
+        </form>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
