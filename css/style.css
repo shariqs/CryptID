@@ -167,3 +167,8 @@ label>span {
 #show-block-data{
 	
 }
+
+
+#key-list {
+	word-break: break-all;
+}

@@ -54,7 +54,6 @@ identityAddedEvent.watch(function (err, result) {
     console.log("At least ran the code");
 });
 
-
 $("#register-button").click(function() {
     ID.addIdentity(web3.eth.defaultAccount, $("#fName").val(), $("#lName").val(),  $("#addr").val(),  $("#dob").val(),  $("#ssn").val(),   (err, res) => {
         if(err){
@@ -77,14 +76,33 @@ $("#lookup-button").click(function() {
     $(".loader").show();  
 });
 
-/**Code that creates a public Key
- *     ID.createPublicKey("0x29805f273ddbcac070a3771a8d264815976f8896" , (err, res) => {
+//Code that creates a public Key
+
+$("#getKeys").click(function() {
+     ID.getPublicKeys($("#privateKey").val() , (err, res) => {
         if(res){
-            console.log(res);
+            $("#key-list").empty();
+            $("#hide-until-keys").show();
+            jQuery.each(res, (i, val) => {
+                console.log(val);
+                $("#key-list").append("<p>"+res+"</p> <hr>");
+            })
+            console.log('it went through!');
           }
           if(err){
               console.log(err);
           }
     });
- * 
- */
+});
+
+$("#createKey").click(function() {
+    ID.createPublicKey($("#privateKey").val() , (err, res) => {
+       if(res){
+           console.log(res);
+         }
+         if(err){
+             console.log(err);
+         }
+   });
+});
+
