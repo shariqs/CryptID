@@ -1,192 +1,156 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:700,300);
+@import url('https://fonts.googleapis.com/css?family=Lato');
 body {
-		background-color: #24AEF2;
+	/* Defining color variables */
+	--primary: #F2F6FA;
+	/* --secondary: #24AEF2; */
+	--secondary: #337ab7;
+	--accent: #FF2D36;
+	--nav-height: 60px;
+	background-color: var(--primary);
+	font-family: lato, "helvetica neue", helvetica, arial;
 }
 
-.sign-up-modal p,
-.sign-up-modal .form-checkbox label {
-		font-size: 1em;
-		font-weight: 300;
+
+/* Stying for hte navbar */
+
+#nav {
+	display: grid;
+	grid-template-columns: 120px auto 30%;
+	/* grid-template-rows: auto; */
+	grid-template-areas: "logo . menu";
+	min-height: var(--nav-height);
+	background-color: white;
+	justify-items: center;
 }
 
-.sign-up-modal .form-checkbox label {
-		cursor: pointer;
+#logo {
+	height: var(--nav-height);
+	width: 100%;
+	text-align: center;
+	grid-area: logo;
+	color: white;
+	background-color: var(--secondary);
+	/* font properties */
+	font-size: 22px;
+	font-weight: bold;
 }
 
-.logo {
-		fill: #FEFEFE;
+#menu {
+	grid-area: menu;
 }
 
-.logo-container {
-		width: 100%;
-		margin-top: 50px;
-		position: relative;
-		text-align: center;
+#menu>a {
+	color: #8D95A6;
+	fill: #8D95A6;
+	font-weight: 700;
+	font-size: 15px;
 }
 
-.sign-up-modal {
-		font-family: "Roboto", arial, sans-serif;
-		color: #fefefe;
-		border-style: solid;
-		border-width: 10px;
-		border-color: rgb(254, 254, 254);
-		border-radius: 10px 10px 10px 10px;
-		background-image: -moz-linear-gradient( -90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
-		background-image: -webkit-linear-gradient( -90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
-		background-image: -ms-linear-gradient( -90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
-		width: 90%;
-		min-width: 400px;
-		max-width: 700px;
-		margin: 0 auto;
-		padding: 25px;
+
+/* Defining the main grid */
+
+#grid-container {
+	display: grid;
+	grid-template-columns: 30% auto 30%;
+	grid-template-rows: auto;
+	grid-template-areas: ". main menu"
 }
 
-.sign-up-modal form {
-		margin: 0 auto;
-		text-align: center;
+
+/* Centered part of the grid ( contains everything other than the navbar )*/
+
+.main {
+	grid-area: main;
+	justify-items: center;
+	text-align: center;
 }
 
-.sign-up-modal input::-webkit-input-placeholder {
-		color: #fefefe;
-		opacity: 1;
+#singup-text {
+	font-weight: bold;
+	font-size: 22px;
+	text-align: left;
 }
 
-.sign-up-modal input:focus::-webkit-input-placeholder {
-		color: #111;
-		opacity: .5;
-		transition: all 0.3s ease;
+
+/* Cotnains the form */
+
+.form-container {
+	border-radius: 10px;
+	padding: 50px, 0px, 0px, 0px;
+	margin-top: 20px;
+	justify-content: center;
+	width: 100%;
+	border-radius: 5px;
+	line-height: 30px;
 }
 
-.sign-up-modal .input-container {
-		margin: 10px;
+
+/* Elements withing the Form container */
+
+label {
+	background-color: white;
+	position: relative;
+	clear: both;
+	display: block;
+	margin-top: 1px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	border: 1px solid rgba(32, 45, 74, .2);
+	border-radius: 4px;
 }
 
-.sign-up-modal input[type="email"],
-.sign-up-modal input[type="text"],
-.sign-up-modal input[type="password"],
-.sign-up-modal input[type="checkbox"]:focus,
-.sign-up-modal input[type="submit"]:focus {
-		outline: 0;
+label>input {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 32px;
+	padding: 50px 30px 20px;
+	width: 100%;
+	background: 0 0;
+	border: 0;
 }
 
-.sign-up-modal input[type="email"],
-.sign-up-modal input[type="text"],
-.sign-up-modal input[type="password"] {
-		font-weight: 700;
-		font-size: 1.4em;
-		padding: 10px;
-		border-width: 2px;
-		border-color: rgba(247, 247, 247, .3);
-		border-style: solid;
-		background: url('transparent');
+label>span {
+	position: absolute;
+	display: block;
+	margin-bottom: 10px;
+	padding: 20px 30px 0;
+	font-weight: 700;
+	color: #202D4A;
 }
 
-.sign-up-modal input[type="email"]:focus,
-.sign-up-modal input[type="text"]:focus,
-.sign-up-modal input[type="password"]:focus {
-		background: white;
-		transition: all 0.3s ease;
-		color: #222;
+
+/* ABSTRACT STYLES */
+
+.shadow {
+	box-shadow: 0 5px 10px rgba(21, 57, 130, .05);
 }
 
-.sign-up-modal input[type="checkbox"] {
-		-webkit-appearance: none;
-		background-color: #fefefe;
-		display: inline-block;
-		position: relative;
-		padding: 6px;
-		margin-left: -6px;
-		margin-top: 25px;
-		cursor: pointer;
+.btn {
+	border-radius: 23px;
+	background-color: var(--secondary);
+	border-color: var(--secondary);
+	width: 100%;
+	font-weight: bold;
 }
 
-.sign-up-modal input[type="checkbox"]:checked:after {
-		content: '\2714';
-		font-size: 13px;
-		position: absolute;
-		top: -2px;
-		left: 2px;
-		color: #111;
-}
 
-.sign-up-modal a {
-		color: #fefefe;
-		text-decoration: underline;
-}
-
-.sign-up-modal a:hover {
-		color: #d26960;
-}
-
-.sign-up-modal input[type="submit"] {
-		font-weight: 700;
-		font-size: 1.8em;
-		color: #111;
-		background: #fefefe;
-		box-shadow: 0px 4px 0px 0px #d26a60;
-		border-style: none;
-		padding: 10px 50px;
-		margin: 25px 0 15px 0;
-		position: relative;
-		display: inline-block;
-		transition: all .1s linear;
-}
-
-.sign-up-modal input[type="submit"]:active {
-		box-shadow: 0 2px 0 #d26a60;
-		transform: translateY(3px);
-		-webkit-transform: translateY(3px);
-		-ms-transform: translateY(3px);
-}
-
-.sign-up-modal #close-modal-button {
-		border-radius: 50%;
-		width: 50px;
-		height: 50px;
-		background-color: #d26960;
-		float: right;
-		position: relative;
-		top: -55px;
-		left: 50px;
-		cursor: pointer;
-}
-
-.sign-up-modal #close-modal-button:before {
-		content: '\2716';
-		font-size: 1.5em;
-		position: relative;
-		top: 10px;
-		left: 17px;
-}
-
-#close-modal-button{
+.loader {
 	display: none;
 }
 
-@media only screen and (min-width: 768px) {
-		.sign-up-modal .form-checkbox {
-				text-align: left;
-		}
-		.sign-up-modal .password-input {
-				width: 47.5%;
-				margin-left: -11.5%;
-		}
-		.sign-up-modal .username-input {
-				width: 47.5%;
-		}
-		.sign-up-modal .email-input {
-				margin-bottom: 20px;
-				margin-top: 50px;
-		}
-		.sign-up-modal form {
-				width: 70%;
-		}
+
+.box {
+	border: 1px solid rgba(32, 45, 74, .2);
+	border-radius: 4px;
+	margin-top: 1px;
+	margin-bottom: 20px;
+	background-color: white;
+	font-size: 24px;
+	text-align: left;
+	padding-left: 15px;
 }
 
-.bt{
-	margin-top: 10px;
-}
-
-h1{
-	text-shadow: 1px 1px 3px #222222;
+.box > h1 {
+	font-weight: bold;
+	text-align: center;
 }
