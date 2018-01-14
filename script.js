@@ -45,7 +45,8 @@ identityAddedEvent.watch(function (err, result) {
     $(".loader").hide();
     if (!err) {
         console.log(result.args.privateKey);
-        //$("#pKey").html("This is your private key. DO NOT LOSE IT!\n" + result.args.privateKey);
+        $("#show-block-data").html("This is your private key. DO NOT LOSE IT!\n" + result.args.privateKey);
+        $("#show-block-data").show();
     } else {
         console.log(err);
     }

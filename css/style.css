@@ -160,3 +160,10 @@ label>span {
 	text-align: center;
 }
 
+
+
+
+/*  By default valued ..adjusted in jquery */
+#show-block-data{
+	display: none;
+}
